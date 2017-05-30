@@ -5,11 +5,15 @@ UI web for ti-dhome
 
 # Managing the UI
 
-> $ docker-compose up -d
-> ...
-> $ docker-compose stop
-> ...
-> $ docker-compose down
+Run, stop and clean:
+
+```bash
+$ docker-compose up -d
+...
+$ docker-compose stop
+...
+$ docker-compose down
+```
 
 # How-To
 
@@ -21,11 +25,14 @@ This is current Dockerfile except line "ADD" and "npm install".
 
 2) Run it with mapping folder where project will be created:
 
-> $ docker run -it -v $(pwd)/src/ti-dhome:/opt/ti-dhome kalemena/ti-dhome-ui bash
-> $$ vue init webpack .
+```bash
+$ docker run -it -v $(pwd)/src/ti-dhome:/opt/ti-dhome kalemena/ti-dhome-ui bash
+$$ vue init webpack .
+```
 
 Answer questions as you like:
 
+```bash
 > ? Generate project in current directory? Yes
 > ? Project name ti-dhome
 > ? Project description ti-dhome-ui
@@ -45,5 +52,5 @@ Answer questions as you like:
 >     npm run dev
 >   
 >   Documentation can be found at https://vuejs-templates.github.io/webpack
-
+```
 
