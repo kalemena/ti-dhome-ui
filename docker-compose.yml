@@ -1,0 +1,11 @@
+version: '2'
+
+services:  
+
+  ti-dhome-ui:
+    image: kalemena/ti-dhome-ui
+    build: .
+    restart: always
+    ports:
+     - "9090:8080"
+    
