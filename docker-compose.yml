@@ -8,4 +8,6 @@ services:
     restart: always
     ports:
      - "9090:8080"
-    
+    volumes:
+# Edit mode - changes in files are in sync live with redenring on browser
+     - ./src/ti-dhome/src:/opt/ti-dhome/src
