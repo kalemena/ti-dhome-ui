@@ -17,7 +17,7 @@ $ docker-compose down
 
 # How-To
 
-## Create this UI from scratch
+## Create or edit the UI from scratch
 
 1) Create a blank node-js project Dockerfile recipe.
 
@@ -54,3 +54,25 @@ Answer questions as you like:
 >   Documentation can be found at https://vuejs-templates.github.io/webpack
 ```
 
+Outcome is that package.json was modified to add the libraries.
+
+## Editing the web app
+
+Every time you need edit something:
+
+1) Adding some libraries for example:
+
+```bash
+$ docker run -it -v $(pwd)/src/ti-dhome:/opt/ti-dhome kalemena/ti-dhome-ui bash
+$$ npm install vue-awesome-swiper --save
+```
+
+Outcome is that package.json was modified to add the libraries.
+
+2) Edit the files to render from host and check results:
+
+Enable map from 'src' (in docker-compose.yml, volumes is mapped)
+
+```bash
+$ docker-compose up -d
+```
