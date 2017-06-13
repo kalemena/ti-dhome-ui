@@ -17,15 +17,36 @@
       <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
     </ul>
+    <swiper :options="swiperOption" ref="mySwiper">
+      <!-- slides -->
+      <swiper-slide>I'm Slide 1</swiper-slide>
+      <swiper-slide>I'm Slide 2</swiper-slide>
+      <swiper-slide>I'm Slide 3</swiper-slide>
+      <swiper-slide>I'm Slide 4</swiper-slide>
+      <swiper-slide>I'm Slide 5</swiper-slide>
+      <swiper-slide>I'm Slide 6</swiper-slide>
+      <swiper-slide>I'm Slide 7</swiper-slide>
+      <!-- Optional controls -->
+      <div class="swiper-pagination"  slot="pagination"></div>
+      <div class="swiper-button-prev" slot="button-prev"></div>
+      <div class="swiper-button-next" slot="button-next"></div>
+      <div class="swiper-scrollbar"   slot="scrollbar"></div>
+    </swiper>
   </div>
 </template>
 
 <script>
+import { swiper, swiperSlide } from 'vue-awesome-swiper'
+
 export default {
   name: 'hello',
+  components: {
+    swiper,
+    swiperSlide
+  },
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Plop Vue.js App'
     }
   }
 }
