@@ -3,8 +3,8 @@
     <h1>{{ msg }}</h1>
     <swiper :options="swiperOption" ref="mySwiper">
       <!-- slides -->
-      <swiper-slide>Map Ground floor</swiper-slide>
-      <swiper-slide>Map First Floor</swiper-slide>
+      <swiper-slide><img src="./assets/maison-rdc-mini.png" alt="Map Ground" style="width:800px;height:550px;"></swiper-slide>
+      <swiper-slide><img src="./assets/maison-1er-mini.png" alt="Map First Floor" style="width:800px;height:550px;"></swiper-slide>
       <swiper-slide>Energy</swiper-slide>
       <!-- Optional controls -->
       <div class="swiper-pagination"  slot="pagination"></div>
