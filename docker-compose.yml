@@ -11,3 +11,4 @@ services:
     volumes:
 # Edit mode - changes in files are in sync live with redenring on browser
      - ./src/ti-dhome/src:/opt/ti-dhome/src
+     - ./src/ti-dhome/static:/opt/ti-dhome/static
