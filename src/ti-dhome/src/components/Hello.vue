@@ -118,7 +118,7 @@ a {
   color: #42b983;
 }
 
-text,circle {
+svg > text, svg > circle {
     stroke: #660000;
     fill:   #FF1200;
     font-family: sans-serif;
@@ -126,7 +126,7 @@ text,circle {
     filter: url(#dropshadow);
 }
 
-circle {
+svg > circle {
     cursor:pointer
 }
 </style>
