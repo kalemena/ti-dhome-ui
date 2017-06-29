@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>    
+    <!--<h1>{{ msg }}</h1>-->    
     <swiper :options="swiperOption" ref="mySwiper">
       <!-- slides -->
       <swiper-slide>
@@ -33,7 +33,7 @@
     </filter>
   </defs>
   <image opacity=".8" x="0" y="0" width="1024" height="768" xlink:href="/static/maison-1er-mini.png" />
-  <circle v-for="heater in heaters" v-if="heater.level === '0'" :id="heater.id" :cx="heater.x" :cy="heater.y" r="5"/>
+  <circle v-for="heater in heaters" v-if="heater.level === '1'" :id="heater.id" :cx="heater.x" :cy="heater.y" r="5"/>
   <text v-for="sensor in sensors" v-if="sensor.level === '1'" :id="sensor.id" :x="sensor.x" :y="sensor.y">{{ sensor.value }}</text>
 </svg>
       </swiper-slide>
