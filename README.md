@@ -5,9 +5,11 @@ UI web for ti-dhome
 
 # Managing the UI
 
-Run, stop and clean:
+Build, Run, Stop and Clean:
 
 ```bash
+$ docker-compose build
+...
 $ docker-compose up -d
 ...
 $ docker-compose stop
@@ -65,6 +67,7 @@ Every time you need edit something:
 ```bash
 $ docker run -it -v $(pwd)/src/ti-dhome:/opt/ti-dhome kalemena/ti-dhome-ui bash
 $$ npm install vue-awesome-swiper --save
+$$ npm install socket.io-client vue-socket.io --save
 ```
 
 Outcome is that package.json was modified to add the libraries.
