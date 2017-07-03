@@ -18,12 +18,18 @@ RUN \
   npm install -g grunt-cli;
   
 RUN npm install -g vue-cli;
-  
+
 ADD [ "src/ti-dhome", "/opt/ti-dhome" ]
 WORKDIR /opt/ti-dhome
 
 RUN npm install
-  
+
+# Minimize image
+FROM node:alpine
+
+COPY --from=0 /opt/ti-dhome /opt/ti-dhome
+WORKDIR /opt/ti-dhome
+
 EXPOSE 8080
 
 ENV TZ=Europe/Paris
