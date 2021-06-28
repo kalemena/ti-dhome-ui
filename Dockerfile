@@ -1,7 +1,5 @@
 FROM centos:7
 
-MAINTAINER Kalemena
-
 RUN \
   yum install -y epel-release; \
   yum update -y; \
